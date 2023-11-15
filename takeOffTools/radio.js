@@ -1,9 +1,10 @@
-var Engine = {
+
+var Radio = {
 	check: function(){
-	console.log("Engine Ready !")
+	console.log("Radio Ready !")
         console.log("Blue level checked".blue)
 
 	return true
 	}
 }
-module.exports = Engine
+module.exports = Radio
