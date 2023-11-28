@@ -1,5 +1,6 @@
 const readline = require('readline');
 const Salle = require('./salle');
+const fs = require('fs');
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -7,18 +8,16 @@ const rl = readline.createInterface({
 });
 
 function creerSalleDepuisCLI() {
-    rl.question("Nom de la salle : ", function(nom) {
+    rl.question("Nom de la salle : ", function (nom) {
         if (!validerNomSalle(nom)) {
             console.log("Le nom de la salle n'est pas dans le format correct.");
-            // Appel récursif pour re-demander le nom de la salle
             creerSalleDepuisCLI();
             return;
         }
 
-        rl.question("Capacité de la salle : ", function(capacite) {
+        rl.question("Capacité de la salle : ", function (capacite) {
             if (isNaN(capacite) || capacite <= 0) {
                 console.log("La capacité de la salle n'est pas valide.");
-                // Appel récursif pour re-demander la capacité de la salle
                 creerSalleDepuisCLI();
                 return;
             }
@@ -28,10 +27,14 @@ function creerSalleDepuisCLI() {
             if (nouvelleSalle) {
                 console.log("Salle créée avec succès:");
                 nouvelleSalle.afficherDetails();
-            }
+                Salle.enregistrerDansFichier();
 
-            // Appel récursif pour afficher à nouveau le menu
-            afficherMenu();
+                // Appel récursif pour afficher à nouveau le menu
+                afficherMenu();
+            } else {
+                // Appel récursif pour re-demander les informations de la salle
+                creerSalleDepuisCLI();
+            }
         });
     });
 }
@@ -43,22 +46,44 @@ function validerNomSalle(nom) {
 
 function afficherToutesLesClasses() {
     const toutesLesSalles = Salle.getSalles();
+
+    if (toutesLesSalles.length === 0) {
+        console.log("Vous n'avez créé aucune salle.");
+        afficherMenu();
+        return;
+    }
+
     console.log("Détails de toutes les salles :");
     toutesLesSalles.forEach(salle => {
         salle.afficherDetails();
     });
 
-    // Appel récursif pour afficher à nouveau le menu
     afficherMenu();
+}
+function obtenirInformationsSalle() {
+    rl.question("Entrez le nom de la salle : ", function (nomSalle) {
+        const salleTrouvee = Salle.getSalles().find(salle => salle.nom === nomSalle);
+
+        if (salleTrouvee) {
+            console.log("Informations sur la salle :");
+            salleTrouvee.afficherDetails();
+        } else {
+            console.log(`La salle avec le nom '${nomSalle}' n'a pas été trouvée.`);
+        }
+
+        // Appel récursif pour afficher à nouveau le menu
+        afficherMenu();
+    });
 }
 
 function afficherMenu() {
     console.log("\nMenu :");
     console.log("1. Créer une salle");
     console.log("2. Voir toutes les salles");
-    console.log("3. Quitter");
+    console.log("3. Obtenir des informations sur une salle");
+    console.log("4. Quitter");
 
-    rl.question("Choisissez une option : ", function(option) {
+    rl.question("Choisissez une option : ", function (option) {
         switch (option) {
             case '1':
                 creerSalleDepuisCLI();
@@ -67,6 +92,9 @@ function afficherMenu() {
                 afficherToutesLesClasses();
                 break;
             case '3':
+                obtenirInformationsSalle();
+                break;
+            case '4':
                 rl.close();
                 break;
             default:
