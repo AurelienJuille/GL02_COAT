@@ -1,4 +1,4 @@
-const Console = require("console");
+//const Console = require("console");
 var Cours = function(uv, creneau){
     this.uv = uv;
     this.creneaux = [].concat(creneau);
