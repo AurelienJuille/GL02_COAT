@@ -20,6 +20,14 @@ class Salle {
             return null;
         }
 
+        // Vérifier si la salle existe déjà dans la liste actuelle
+        const salleExistante = Salle.salles.find(salle => salle.nom === nom && salle.capacite === capacite);
+
+        if (salleExistante) {
+            console.log("Cette salle existe déjà.");
+            return null;
+        }
+
         const nouvelleSalle = new Salle(nom, capacite);
         return nouvelleSalle;
     }
@@ -34,12 +42,15 @@ class Salle {
         const sallesValides = Salle.salles.filter(salle => salle.nom && salle.capacite);
         const contenu = sallesValides.map(salle => `${salle.nom},${salle.capacite}`).join('\n') + '\n';
 
-        fs.writeFile(nomFichier, contenu, { flag: 'a' }, err => {
+        fs.writeFile(nomFichier, contenu, { flag: 'w' }, err => {
             if (err) {
                 console.error(`Erreur lors de l'écriture dans le fichier ${nomFichier} : ${err.message}`);
+            } else {
+                console.log("Salles enregistrées dans le fichier.");
             }
         });
     }
+
 
     static chargerDepuisFichier() {
         const nomFichier = 'salles.txt';
@@ -48,11 +59,14 @@ class Salle {
             const data = fs.readFileSync(nomFichier, 'utf-8');
             const lignes = data.split('\n');
 
+            Salle.salles = []; // Réinitialisez la liste des salles
+
             lignes.forEach(ligne => {
                 const [nom, capacite] = ligne.split(',');
 
-                if (nom && capacite && !Salle.salles.some(salle => salle.nom === nom)) {
+                if (nom && capacite) {
                     const nouvelleSalle = new Salle(nom, parseInt(capacite));
+                    // Pas besoin du push ici car la salle est déjà ajoutée dans le constructeur
                 }
             });
 
@@ -60,6 +74,9 @@ class Salle {
         } catch (err) {
             console.error(`Erreur lors de la lecture du fichier ${nomFichier} : ${err.message}`);
         }
+    }
+    static salleExisteDeja(nom) {
+        return Salle.salles.some(salle => salle.nom === nom);
     }
 }
 
