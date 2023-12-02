@@ -1,4 +1,5 @@
 const cli = require("@caporal/core").default;
+const { lectureDonnees, cheminDonnees } = require("../fonctions.js");
 
 module.exports = cli
 	// Affiche un classement des salles ordonné selon leur capacité
