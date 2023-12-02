@@ -1,5 +1,5 @@
 const browseDir = require("browse-directory");
-const Parser = require('../Parser.js');
+const Parser = require('./Parser');
 const colors  = require('colors');
 //const vegalite = require('vega-lite');
 const fs = require('fs');
