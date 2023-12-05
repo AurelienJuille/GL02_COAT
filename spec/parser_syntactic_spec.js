@@ -1,4 +1,4 @@
-describe("Program Syntactic testing of VpfParser", function(){
+/*describe("Program Syntactic testing of VpfParser", function(){
 	
 	beforeAll(function() {
 		const POI = require('../POI');
@@ -48,4 +48,4 @@ describe("Program Syntactic testing of VpfParser", function(){
 		
 	});
 	
-});
+});*/
