@@ -1,24 +1,24 @@
-const POI = require('../POI');
+const Creneau = require('./model/Creneau.js');
 
-describe("Program Semantic testing of POI", function(){
+describe("Program Semantic testing of Creneau", function(){
 	
 	
 	beforeAll(function() {
 
-		this.p = new POI("Café d'Albert", 48.857735, 2.394987, [1,3,2]);
+		this.c = new Creneau("EN01", 1,"C1", 24, "J", "10:00", "12:00", "F1", "P202");
 
 	});
 	
-	it("can create a new POI", function(){
+	it("can create a new Creneau", function(){
 		
-		expect(this.p).toBeDefined();
+		expect(this.c).toBeDefined();
 		// toBe is === on simple values
-		expect(this.p.name).toBe("Café d'Albert");
-		expect(this.p).toEqual(jasmine.objectContaining({name: "Café d'Albert"}));
+		expect(this.c.nomUe).toBe("EN01");
+		expect(this.c).toEqual(jasmine.objectContaining({nomUe: "EN01"}));
 		
 	});
 	
-	it("can add a new ranking", function(){
+	/*it("can add a new ranking", function(){
 		
 		this.p.addRating(2);
 		expect(this.p.ratings).toEqual([1,3,2,2]);
@@ -49,6 +49,6 @@ describe("Program Semantic testing of POI", function(){
 		expect(trackedPOI.lastUpdate).toBe(currentDateStringPlus2days);
 
 		jasmine.clock().uninstall();
-	});
+	});*/
 	
 });
