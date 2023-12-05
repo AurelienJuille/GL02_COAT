@@ -1,24 +1,25 @@
-/*describe("Program Syntactic testing of VpfParser", function(){
+describe("Program Syntactic testing of Parser", function(){
 	
 	beforeAll(function() {
-		const POI = require('../POI');
+		const Creneau = require('../model/Creneau');
 
-		const VpfParser = require('../VpfParser');
-		this.analyzer = new VpfParser();
+		const Parser = require('../Parser');
+		this.analyzer = new Parser();
 		
-		this.pEmptyRating = new POI("Café d'Albert", 48.857735, 2.394987, []);
+		this.c = new Creneau("EN01", 1,"C1", 24, "J", "10:00", "12:00", "F1", "P202");
+
 
 	});
 	
 	it("can read a name from a simulated input", function(){
 		
-		let input = ["name", "Café d'Albert"];
-		expect(this.analyzer.name(input)).toBe("Café d'Albert");
+		let input = ["nomUe", "EN01"];
+		expect(this.analyzer.nomUE(input)).toBe("EN01");
 		
 	});
 
 
-	it("can read a lat lng coordinate from a simulated input", function(){
+	/*it("can read a lat lng coordinate from a simulated input", function(){
 		
 		let input = ["latlng", "48.866205;2.399279"];
 		expect(this.analyzer.latlng(input)).toEqual({ lat: "48.866205" , lng: "2.399279" });
@@ -46,6 +47,6 @@
 		
 		expect(this.analyzer.poi(data)).toBeTrue();
 		
-	});
+	});*/
 	
-});*/
+});
