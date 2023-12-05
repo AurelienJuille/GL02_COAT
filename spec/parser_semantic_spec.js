@@ -1,4 +1,4 @@
-const Creneau = require('./model/Creneau.js');
+const Creneau = require('../model/creneau');
 
 describe("Program Semantic testing of Creneau", function(){
 	
