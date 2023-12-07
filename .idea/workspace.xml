@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6e9f592a-b9a6-4c37-a2de-484ba0ea7370" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/commands/classementTauxOccupation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/generateICalendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/visuelOccupation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icalendar_CL02.ics" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/Parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2YxYoFp4aQwOyLf9XSEtWm0H6FM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;branchothmane&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSI/Desktop/GL02_COAT-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.2.5\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e9f592a-b9a6-4c37-a2de-484ba0ea7370" name="Changes" comment="" />
+      <created>1701468870586</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701468870586</updated>
+      <workItem from="1701468871700" duration="1216000" />
+      <workItem from="1701512430350" duration="60000" />
+      <workItem from="1701525607843" duration="1747000" />
+      <workItem from="1701616480340" duration="1215000" />
+      <workItem from="1701618144584" duration="893000" />
+      <workItem from="1701621461186" duration="4464000" />
+      <workItem from="1701672963572" duration="4374000" />
+      <workItem from="1701699616667" duration="156000" />
+      <workItem from="1701714118389" duration="402000" />
+      <workItem from="1701714524953" duration="8737000" />
+      <workItem from="1701723577466" duration="19000" />
+      <workItem from="1701723652312" duration="279000" />
+      <workItem from="1701983826795" duration="760000" />
+      <workItem from="1701984609761" duration="2228000" />
+      <workItem from="1701986869048" duration="1458000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
