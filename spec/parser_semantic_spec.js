@@ -1,4 +1,5 @@
 const Creneau = require('../model/creneau');
+const Cours = require('../model/cours');
 
 describe("Program Semantic testing of Creneau", function(){
 	
