@@ -89,15 +89,15 @@ describe("Program Syntactic testing of Parser", function(){
 		expect(this.pEmptyRating.ratings[0]).toBe("1");
 		expect(this.pEmptyRating.ratings[1]).toBeUndefined();
 		
-	});	
+	});	*/
 	
-	it("can parse an entire POI from a simulated input", function(){
+	it("can parse an entire Cours from a simulated input", function(){
 		
-		let input = "START_POI\r\nname: Chez Gabin\r\nlatlng: 48.871794;2.379538\r\nnote: 3\r\nnote: 2\r\nEND_POI"
+		let input = "+MC01\r\n1,C1,P=24,H=J 10:00-12:00,F1,S=P202//\r\n1,T1,P=24,H=J 13:00-16:00,F2,S=EXT1//"
 		let data = this.analyzer.tokenize(input);
 		
 		expect(this.analyzer.poi(data)).toBeTrue();
 		
-	});*/
+	});
 	
 });
