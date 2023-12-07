@@ -6,7 +6,8 @@ describe("Program Syntactic testing of Parser", function(){
 		const Parser = require('../Parser');
 		this.analyzer = new Parser();
 		
-		this.c = new Creneau("EN01", 1,"C1", 24, "J", "10:00", "12:00", "F1", "P202");
+		this.cours = new Cours("EN01" []);
+		this.creneau = new Creneau("EN01", "C1", 24, "J", "10:00", "12:00", "F1", "P202");
 
 
 	});
