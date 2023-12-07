@@ -7,7 +7,7 @@ describe("Program Semantic testing of Creneau", function(){
 	beforeAll(function() {
 
 		this.cours = new Cours("EN01", []);
-		this.creneau = new Creneau("EN01", "C1", 24, "J", "10:00", "12:00", "F1", "P202");
+		this.c = new Creneau("EN01", "C1", 24, "J", "10:00", "12:00", "F1", "P202");
 
 	});
 	
