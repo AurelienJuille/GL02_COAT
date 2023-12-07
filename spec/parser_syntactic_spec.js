@@ -2,6 +2,7 @@ describe("Program Syntactic testing of Parser", function(){
 	
 	beforeAll(function() {
 		const Creneau = require('../model/Creneau');
+		const Cours = require('../model/Cours');
 
 		const Parser = require('../Parser');
 		this.analyzer = new Parser();
