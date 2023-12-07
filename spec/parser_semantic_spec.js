@@ -5,7 +5,8 @@ describe("Program Semantic testing of Creneau", function(){
 	
 	beforeAll(function() {
 
-		this.c = new Creneau("EN01", 1,"C1", 24, "J", "10:00", "12:00", "F1", "P202");
+		this.cours = new Cours("EN01", []);
+		this.creneau = new Creneau("EN01", "C1", 24, "J", "10:00", "12:00", "F1", "P202");
 
 	});
 	
@@ -18,13 +19,13 @@ describe("Program Semantic testing of Creneau", function(){
 		
 	});
 	
-	/*it("can add a new ranking", function(){
+	it("can add a new ranking", function(){
 		
-		this.p.addRating(2);
-		expect(this.p.ratings).toEqual([1,3,2,2]);
+		this.cours.addCreneau(creneau);
+		expect(this.cours.creneaux).toEqual(["EN01", "C1", 24, "J", "10:00", "12:00", "F1", "P202"]);
 		
 	});
-	
+	/*
 	it("can compute the average ranking", function(){
 		expect(this.p.averageRatings()).toBe(2);
 	});
