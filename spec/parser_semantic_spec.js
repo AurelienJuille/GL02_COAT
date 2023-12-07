@@ -22,7 +22,7 @@ describe("Program Semantic testing of Creneau", function(){
 	
 	it("can add a new ranking", function(){
 		
-		this.cours.addCreneau(creneau);
+		this.cours.addCreneau(c);
 		expect(this.cours.creneaux).toEqual(["EN01", "C1", 24, "J", "10:00", "12:00", "F1", "P202"]);
 		
 	});
