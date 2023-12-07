@@ -24,10 +24,6 @@ node index.js capacite <nomSalle>
 ```bash
 node index.js classementsalles
 ```
-###### Exemple: 
-```bash
- node index.js classementsalles
-```
 #### Générez un fichier ICalendar pour un cours d'une date de début à une date de fin.
 
 ```bash
@@ -42,13 +38,8 @@ node index.js generateICalendar <dateDebut> <dateFin> <nomDuCours>
 ```bash
 node index.js classementTauxOccupation
 ```
-###### Exemple: 
-```bash
- node index.js classementTauxOccupation
-```
 ##### Générer un visuel synthétique du taux d'occupation des salles.
 
 ```bash
 node index.js visuelOccupation
-# node index.js visuelOccupation
 ```
