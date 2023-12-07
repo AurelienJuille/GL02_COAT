@@ -13,7 +13,7 @@ describe("Program Syntactic testing of Parser", function(){
 	
 	it("can read a nomeUe from a simulated input", function(){
 		
-		let input = ["+", "EN01"];
+		let input = ["EN01"];
 		expect(this.analyzer.nom(input)).toBe("EN01");
 		
 	});
