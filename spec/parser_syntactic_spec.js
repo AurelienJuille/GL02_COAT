@@ -29,14 +29,14 @@ describe("Program Syntactic testing of Parser", function(){
 
 	it("can read a capacitaire from a simulated input", function(){
 		
-		let input = [24];
-		expect(this.analyzer.capacitaire(input)).toBe(24);
+		let input = ["24"];
+		expect(this.analyzer.capacitaire(input)).toBe("24");
 		
 	});
 
 	it("can read a jour from a simulated input", function(){
 		
-		let input = ["J"];
+		let input = ["H", "=", "J"];
 		expect(this.analyzer.jour(input)).toBe("J");
 		
 	});
@@ -50,7 +50,7 @@ describe("Program Syntactic testing of Parser", function(){
 
 	it("can read a heureFin from a simulated input", function(){
 		
-		let input = ["12:00"];
+		let input = ["-","12:00"];
 		expect(this.analyzer.heureFin(input)).toBe("12:00");
 		
 	});
@@ -64,7 +64,7 @@ describe("Program Syntactic testing of Parser", function(){
 
 	it("can read a salle from a simulated input", function(){
 		
-		let input = ["P202"];
+		let input = ["S", "=", "P202"];
 		expect(this.analyzer.salle(input)).toBe("P202");
 		
 	});
