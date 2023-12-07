@@ -1,19 +1,42 @@
 # GL02_COAT
+SRU
 
-Pour commencer utiliser la commande :
+## Installation
 
+[npm](https://www.npmjs.com/)
+
+```bash
 npm install
+```
 
-Apres l'avoir fait, vous pouvez utiliser les différentes commandes 
-avec node index.js <commande> <arg>(s'il y a un arguemnt)
+## Liste des commandes : 
+#### Capacité d'une salle.
 
-Liste des commandes :
+```bash
+node index.js capacite <nomSalle>
+# node index.js capacite D108
+```
+#### Classements des chambres selon leurs capacités.
 
-- node index.js capacite <nomSalle>
-- node index.js classementsalles
-- node index.js sallescours <nomDuCours>
-- node index.js generateICalendar <dateDebut> <dateFin> <nomDuCours>
-//node index.js generateICalendar 2023-12-03 2023-12-28 CL02 ou node index.js generateICalendar 2023-12-03 2023-12-28 "CL02"
-- node index.js classementTauxOccupation
-- node index.js visuelOccupation
+```bash
+node index.js classementsalles
+# node index.js classementsalles
+```
+#### Générez un fichier ICalendar pour un cours d'une date de début à une date de fin.
 
+```bash
+node index.js generateICalendar <dateDebut> <dateFin> <nomDuCours>
+# node index.js generateICalendar 2023-12-03 2023-12-28 CL02
+# index.js generateICalendar 2023-12-03 2023-12-28 "CL02"
+```
+##### Classements des chambres selon leurs taux d'occupation.
+```bash
+node index.js classementTauxOccupation
+# node index.js classementTauxOccupation
+```
+##### Générer un visuel synthétique du taux d'occupation des salles.
+
+```bash
+node index.js visuelOccupation
+# node index.js visuelOccupation
+```
