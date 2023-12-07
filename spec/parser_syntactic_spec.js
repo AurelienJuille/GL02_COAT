@@ -11,9 +11,9 @@ describe("Program Syntactic testing of Parser", function(){
 
 	});
 	
-	it("can read a name from a simulated input", function(){
+	it("can read a nomeUe from a simulated input", function(){
 		
-		let input = ["nomUe", "EN01"];
+		let input = ["+", "EN01"];
 		expect(this.analyzer.nom(input)).toBe("EN01");
 		
 	});
