@@ -29,8 +29,8 @@ describe("Program Syntactic testing of Parser", function(){
 
 	it("can read a capacitaire from a simulated input", function(){
 		
-		let input = ["24"];
-		expect(this.analyzer.capacitaire(input)).toBe("24");
+		let input = ["P", "=", 24];
+		expect(this.analyzer.capacitaire(input)).toBe(24);
 		
 	});
 
