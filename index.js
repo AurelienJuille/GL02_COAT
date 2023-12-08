@@ -1,6 +1,6 @@
 const cli = require("@caporal/core").default;
 
-const sallecours = require("./commands/sallecours")
+const sallecours = require("./commands/sallescours")
 const classementsalles = require("./commands/classementsalles")
 const capacite = require("./commands/capacite")
 const classementTauxOccupation = require("./commands/classementTauxOccupation");
