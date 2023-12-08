@@ -6,6 +6,8 @@ const capacite = require("./commands/capacite")
 const classementTauxOccupation = require("./commands/classementTauxOccupation");
 const generateICalendar = require("./commands/generateICalendar");
 const visuelOccupation=require("./commands/visuelOccupation");
+const disposalle = require("./commands/dispoSalle")
+const dispoHo = require("./commands/salleDispoH")
 
 
 
@@ -18,5 +20,7 @@ cli
 					classementTauxOccupation
 					generateICalendar
 					visuelOccupation
+					dispoHo
+					disposalle
 
 cli.run(process.argv.slice(2));

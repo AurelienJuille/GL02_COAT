@@ -1,10 +1,17 @@
 const cli = require("@caporal/core").default;
 const { lectureDonnees, cheminDonnees } = require("../fonctions.js");
 
+// Convertir l'heure au format 'HH:MM' en minutes pour la comparaison
+function convertToMinutes(heure) {
+	const [hours, minutes] = heure.split(':').map(Number);
+	return hours * 60 + minutes;
+  }
+
 module.exports = cli
-	// Affiche la disponibilté d'une salle
+	// Affiche la disponibilité d'une salle
 	.command('disposalle', 'Affiche la disponibilté d\'une salle.')
-	.action(({logger}) => {
+    .argument('<salle>', 'Nom de la salle.')
+	.action(({args, logger}) => {
 	let parserResult = lectureDonnees(cheminDonnees);
 
 	if(parserResult.errorCount > 0){
@@ -17,18 +24,48 @@ module.exports = cli
 		return;
 	}
 
-    let salle = prompt("Veuillez entrer la salle pour voir ses disponibilités");
-    let dispo;
+	const { parsedCRU, listeCreneaux, salles } = parserResult;
 
-    if (parserResult.salles === salle){
-        dispo.push ([parserResult.jour + parserResult.heureDebut + " - " + parserResult.heureFin , parserResult.nom])
-    }
+	const creneauxSalle = listeCreneaux.filter((creneau) => {
+		return creneau.salle === args.salle
+	});
 
-    dispo.sort((a, b) => b[0]- a[0]);
+	if (!(args.salle in parserResult.salles)) {
+		console.log("La salle spécifiée n'existe pas.");
+	  }
 
-    console.log("La salle" + salle + "est occupé")
-    dispo.array.forEach(element => {
-        console.log(element[0] + "pour le cours de " + element[1])
-    });
+	else{
+
+		// Trier les créneaux en fonction de l'heure de début
+		creneauxSalle.sort((a, b) => {
+			const heureDebutA = convertToMinutes(a.heureDebut);
+			const heureDebutB = convertToMinutes(b.heureDebut);
+			if (heureDebutA !== heureDebutB) {
+			  return heureDebutA - heureDebutB;
+			}
+		});
+
+			// Trier les créneaux en fonction de l'heure de début
+		creneauxSalle.sort((a, b) => {
+			const ordreJours = { L: 1, Ma: 2, ME: 3, J: 4, V: 5 };
+  			return ordreJours[a.jour] - ordreJours[b.jour];
+		});
+
+		// Créer le planning trié
+		let planning = creneauxSalle.map(creneau => {
+		return {
+			jour: creneau.jour,
+			heureDebut: creneau.heureDebut,
+			heureFin: creneau.heureFin
+		};
+		});
+
+		// Afficher le planning trié par jour et heure de début
+		console.log("Voici les créneaux pour lesquels la salle "+ args.salle + " est occupée:");
+		planning.forEach((element)=>{
+			console.log(`Le ${element.jour} de ${element.heureDebut} à ${element.heureFin}`)
+		})
+	}
+    
 
 })
