@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e9f592a-b9a6-4c37-a2de-484ba0ea7370" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/Parser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/classementTauxOccupation.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/classementTauxOccupation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/classementsalles.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/classementsalles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/generateICalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/generateICalendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/salleDispoH.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/salleDispoH.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/visuelOccupation.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/visuelOccupation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donnees/AB/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/AB/edt.cru" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donnees/CD/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/CD/edt.cru" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donnees/EF/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/EF/edt.cru" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donnees/GH/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/GH/edt.cru" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donnees/IJ/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/IJ/edt.cru" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donnees/KL/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/KL/edt.cru" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donnees/MN/edt.cru" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/donnees/OP/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/OP/edt.cru" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donnees/QR/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/QR/edt.cru" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donnees/ST/edt.cru" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icalendar_CL02.ics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/occupation_chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/occupation_chart.html" afterDir="false" />
-    </list>
+    <list default="true" id="6e9f592a-b9a6-4c37-a2de-484ba0ea7370" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +76,7 @@
       <workItem from="1701984609761" duration="2228000" />
       <workItem from="1701986869048" duration="1458000" />
       <workItem from="1702026018124" duration="1356000" />
-      <workItem from="1702063665373" duration="6415000" />
+      <workItem from="1702063665373" duration="6764000" />
     </task>
     <servers />
   </component>
