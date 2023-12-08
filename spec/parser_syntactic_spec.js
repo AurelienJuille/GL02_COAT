@@ -69,13 +69,5 @@ describe("Program Syntactic testing of Parser", function(){
 		
 	});
 	
-	/*it("can parse an entire Cours from a simulated input", function(){
-		
-		let input = "+MC01\r\n1,C1,P=24,H=J 10:00-12:00,F1,S=P202//\r\n1,T1,P=24,H=J 13:00-16:00,F2,S=EXT1//"
-		let data = this.analyzer.tokenize(input);
-		
-		expect(this.analyzer.cours(data)).toBeDefined();
-		
-	});*/
 	
 });
