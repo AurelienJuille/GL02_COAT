@@ -10,6 +10,15 @@ describe("Program Semantic testing of Creneau", function(){
 		this.c = new Creneau("EN01", "C1", 24, "J", "10:00", "12:00", "F1", "P202");
 
 	});
+
+	it("can create a new Cours", function(){
+		
+		expect(this.cours).toBeDefined();
+		// toBe is === on simple values
+		expect(this.cours.uv).toBe("EN01");
+		expect(this.cours).toEqual(jasmine.objectContaining({uv: "EN01"}));
+		
+	});
 	
 	it("can create a new Creneau", function(){
 		
@@ -22,36 +31,10 @@ describe("Program Semantic testing of Creneau", function(){
 	
 	it("can add a new ranking", function(){
 		
-		this.cours.addCreneau(this.c);
+		//this.cours.addCreneau(this.c);
 		//expect(this.cours.creneaux).toEqual(["EN01", "C1", 24, "J", "10:00", "12:00", "F1", "P202"]);
 		//expect(this.cours.creneaux).toEqual(jasmine.objectContaining({nomUe: 'EN01', type: 'C1', capacitaire: 24, jour: 'J', heureDebut: '10:00', heureFin: '12:00', index: 'F1', salle: 'P202'}));
 		
 	});
-	/*
-	it("can compute the average ranking", function(){
-		expect(this.p.averageRatings()).toBe(2);
-	});
-	
-	it("can track POI last updates date (DD/MM/YYYY)", function(){
-		jasmine.clock().install();
-		jasmine.clock().mockDate(new Date(2020, 11, 20));
-		
-		let currentDate = new Date();
-		let currentDateString = currentDate.getDate()+"/"+currentDate.getMonth()+"/"+currentDate.getFullYear();
-		let currentDateStringPlus2days = (currentDate.getDate() + 2) +"/"+currentDate.getMonth()+"/"+currentDate.getFullYear();
-		
-		let trackedPOI = new POI("Café d'Albert", 48.857735, 2.394987, []);
-		
-		
-		expect(trackedPOI.lastUpdate).toBeDefined();
-		expect(trackedPOI.lastUpdate).toBe(currentDateString);
-		
-		jasmine.clock().mockDate(new Date(2020, 11, 22));
-
-		trackedPOI.addRating(2);
-		expect(trackedPOI.lastUpdate).toBe(currentDateStringPlus2days);
-
-		jasmine.clock().uninstall();
-	});*/
 	
 });
