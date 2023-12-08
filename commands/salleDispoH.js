@@ -18,8 +18,8 @@ function isValidJour(jour) {
 }
 
 module.exports = cli
-    //Capacité max d'une salle parmi tous les créneaux
-    .command('dispoHo', "Affiche quelle capacité maximale une salle peut avoir.")
+    //Salles disponibles à un horaire donné
+    .command('dispoHo', "Affiche les salle disponibles à un horaire donné.")
     .argument('<jour>', 'Jour du créneau. (L, MA, ME, J, V, S)')
     .argument('<heure>', 'Horaire début de créneau (format: HH:MM)')
     .action(({ args, logger }) => {
