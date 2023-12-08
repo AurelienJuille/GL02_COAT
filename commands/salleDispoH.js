@@ -5,7 +5,7 @@ const colors = require('colors');
 module.exports = cli
 	//Capacité max d'une salle parmi tous les créneaux
 	.command('dispoHo', "Affiche quelle capacité maximale une salle peut avoir.")
-	.argument('<jour>', 'Nom de la salle.')
+	.argument('<jour>', 'Jour du créneau.')
     .argument('<heure>','Horaire début de créneau')
 	.action(({ args, logger }) => {
 
