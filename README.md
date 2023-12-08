@@ -43,3 +43,18 @@ node index.js classementTauxOccupation
 ```bash
 node index.js visuelOccupation
 ```
+#### Consulter les disponibilités d’une salle de cours.
+
+```bash
+node index.js disposalle <salle>
+```
+
+#### Consulter les salles disponibles à un horaire donné.
+
+```bash
+node index.js dispoHo <jour> <heure>
+```
+###### Exemple: 
+```bash
+ node index.js dispoHo J 10:00
+```
