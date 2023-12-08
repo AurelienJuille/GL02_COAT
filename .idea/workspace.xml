@@ -5,15 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e9f592a-b9a6-4c37-a2de-484ba0ea7370" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/commands/classementTauxOccupation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/generateICalendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/visuelOccupation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icalendar_CL02.ics" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/Parser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/classementTauxOccupation.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/classementTauxOccupation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/classementsalles.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/classementsalles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/generateICalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/generateICalendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/salleDispoH.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/salleDispoH.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/visuelOccupation.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/visuelOccupation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donnees/AB/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/AB/edt.cru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donnees/CD/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/CD/edt.cru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donnees/EF/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/EF/edt.cru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donnees/GH/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/GH/edt.cru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donnees/IJ/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/IJ/edt.cru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donnees/KL/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/KL/edt.cru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donnees/MN/edt.cru" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/donnees/OP/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/OP/edt.cru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donnees/QR/edt.cru" beforeDir="false" afterPath="$PROJECT_DIR$/donnees/QR/edt.cru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donnees/ST/edt.cru" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/fonctions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icalendar_CL02.ics" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/occupation_chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/occupation_chart.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,22 +52,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;branchothmane&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSI/Desktop/GL02_COAT-main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.2.5\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/MSI/Documents/GL02/GL02_COAT",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.2.5\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MSI\Documents\GL02\GL02_COAT" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -80,6 +96,8 @@
       <workItem from="1701983826795" duration="760000" />
       <workItem from="1701984609761" duration="2228000" />
       <workItem from="1701986869048" duration="1458000" />
+      <workItem from="1702026018124" duration="1356000" />
+      <workItem from="1702063665373" duration="6415000" />
     </task>
     <servers />
   </component>

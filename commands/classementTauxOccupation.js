@@ -1,5 +1,5 @@
 const cli = require("@caporal/core").default;
-const { lectureDonnees, cheminDonnees } = require("../fonctions.js");
+const { lectureDonnees, cheminDonnees, dureeOccupation } = require("../fonctions.js");
 
 module.exports = cli
     .command('classementTauxOccupation', 'Affiche un classement des salles ordonné selon leur taux d\'occupation.')
@@ -17,7 +17,7 @@ module.exports = cli
         }
 
         const joursOuvertsParSemaine = 5; // Nombre de jours par semaine
-        const heuresParJour = 8; // Nombre d'heures par jour
+        const heuresParJour = 10; // Nombre d'heures par jour
 
         // Calcul du taux + tri des salles
         const sallesAvecTaux = Object.keys(parserResult.salles)
@@ -26,7 +26,7 @@ module.exports = cli
                 const capacite = parserResult.salles[key];
                 const dureeTotale = parserResult.listeCreneaux.reduce((total, creneau) => {
                     if (creneau.salle === salle) {
-                        const dureeCreneau = parserResult.dureeOccupation(creneau.heureDebut, creneau.heureFin);
+                        const dureeCreneau = dureeOccupation(creneau.heureDebut, creneau.heureFin);
                         //console.log(`Salle: ${salle}, Capacite: ${capacite}, Duree Creneau: ${dureeCreneau}`);
                         return total + dureeCreneau;
                     }

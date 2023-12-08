@@ -4,6 +4,7 @@ const { createWriteStream } = require('fs');
 const { promisify } = require('util');
 const pipeline = promisify(require('stream').pipeline);
 const vegaEmbed = require('vega-embed');
+const {dureeOccupation} = require("../fonctions");
 
 module.exports = cli
     .command('visuelOccupation', 'Génère un visuel synthétique du taux d\'occupation des salles.')
@@ -21,7 +22,7 @@ module.exports = cli
         }
 
         const joursOuvertsParSemaine = 5; // Nombre de jours par semaine
-        const heuresParJour = 8; // Nombre d'heures par jour
+        const heuresParJour = 10; // Nombre d'heures par jour
 
         // Calcul du taux d'occupation et tri des salles
         const sallesAvecTaux = Object.keys(parserResult.salles)
@@ -30,7 +31,8 @@ module.exports = cli
                 const capacite = parserResult.salles[key];
                 const dureeTotale = parserResult.listeCreneaux.reduce((total, creneau) => {
                     if (creneau.salle === salle) {
-                        const dureeCreneau = parserResult.dureeOccupation(creneau.heureDebut, creneau.heureFin);
+                        const dureeCreneau = dureeOccupation(creneau.heureDebut, creneau.heureFin);
+
                         return total + dureeCreneau;
                     }
                     return total;

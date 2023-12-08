@@ -17,6 +17,11 @@ cli
     .argument('<dateFin>', 'La date de fin (format: YYYY-MM-DD)')
     .argument('<cours>', 'Le cours')
     .action(({args, logger}) => {
+        if (new Date(args.dateDebut) >= new Date(args.dateFin)) {
+            logger.info("La date de début doit être antérieure à la date de fin.".red);
+            return;
+        }
+
         let parserResult = lectureDonnees(cheminDonnees);
 
         if (parserResult.errorCount > 0) {
