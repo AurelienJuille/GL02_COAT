@@ -19,6 +19,15 @@ node index.js capacite <nomSalle>
 ```bash
  node index.js capacite D108
 ```
+#### Salle de cours.
+
+```bash
+node index.js sallescours <nomDuCours>
+```
+###### Exemple: 
+```bash
+ node index.js sallescours CL02
+```
 #### Classements des chambres selon leurs capacités.
 
 ```bash
