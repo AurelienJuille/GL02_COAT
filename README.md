@@ -28,7 +28,7 @@ node index.js sallescours <nomDuCours>
 ```bash
  node index.js sallescours CL02
 ```
-#### Classements des chambres selon leurs capacités.
+#### Classements des salles selon leurs capacités.
 
 ```bash
 node index.js classementsalles
@@ -43,7 +43,7 @@ node index.js generateICalendar <dateDebut> <dateFin> <nomDuCours>
  node index.js generateICalendar 2023-12-03 2023-12-28 CL02
 # index.js generateICalendar 2023-12-03 2023-12-28 "CL02"
 ```
-##### Classements des chambres selon leurs taux d'occupation.
+##### Classements des salles selon leurs taux d'occupation.
 ```bash
 node index.js classementTauxOccupation
 ```
