@@ -46,7 +46,13 @@ module.exports = cli
             })
             .sort((a, b) => b.tauxOccupation - a.tauxOccupation);
 
+        var lastTaux = -1;
+        var realIdx = 1;
         sallesAvecTaux.forEach((salle, index) => {
-            console.log(`${index + 1}. ${salle.salle} (Taux d'occupation: ${salle.tauxOccupation.toFixed(2)}%)`);
+            if (salle.tauxOccupation != lastTaux) {
+                realIdx = index + 1
+                lastTaux = salle.tauxOccupation
+            }
+            console.log(`${realIdx}. ${salle.salle} (Taux d'occupation: ${salle.tauxOccupation.toFixed(2)}%)`);
         });
     });

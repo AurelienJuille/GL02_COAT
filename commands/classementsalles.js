@@ -16,7 +16,9 @@ module.exports = cli
 			logger.info("Le fichier ne contient pas de salles.".red);
 			return;
 		}
-
+		
+		var lastCapacity = -1;
+		var realIdx = 1;
 		Object.keys(parserResult.salles)
 			.map(key => ({
 				salle: key,
@@ -24,7 +26,12 @@ module.exports = cli
 			}))
 			.filter(salle => salle.capacite > 0)
 			.sort((a, b) => b.capacite - a.capacite)
+			
 			.forEach((salle, index) => {
-				console.log(`${index + 1}. ${salle.salle} (${salle.capacite})`);
+				if (salle.capacite != lastCapacity) {
+					realIdx = index + 1
+					lastCapacity = salle.capacite
+				}
+				console.log(`${realIdx}. ${salle.salle} (Taux d'occupation: ${salle.capacite})`);
 			});
 	});
