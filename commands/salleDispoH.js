@@ -5,7 +5,8 @@ const colors = require('colors');
 // Fonction pour valider le format de l'heure
 function isValidHourFormat(heure) {
     const [hour, minute] = heure.split(':');
-    const isValidHour = /^\d{2}$/.test(hour) && parseInt(hour, 10) >= 0 && parseInt(hour, 10) <= 23;
+    //const isValidHour = /^\d{2}$/.test(hour) && parseInt(hour, 10) >= 0 && parseInt(hour, 10) <= 23;
+    const isValidHour = parseInt(hour, 10) >= 0 && parseInt(hour, 10) <= 23;
     
     
     const isValidMinute = /^\d{2}$/.test(minute) && parseInt(minute, 10) >= 0 && parseInt(minute, 10) <= 59;
