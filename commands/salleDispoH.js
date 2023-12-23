@@ -6,6 +6,8 @@ const colors = require('colors');
 function isValidHourFormat(heure) {
     const [hour, minute] = heure.split(':');
     const isValidHour = /^\d{2}$/.test(hour) && parseInt(hour, 10) >= 0 && parseInt(hour, 10) <= 23;
+    
+    
     const isValidMinute = /^\d{2}$/.test(minute) && parseInt(minute, 10) >= 0 && parseInt(minute, 10) <= 59;
 
     return isValidHour && isValidMinute;
@@ -46,8 +48,9 @@ module.exports = cli
 
         // Filtrer les créneaux pour trouver ceux qui correspondent au jour et à l'heure fournis
         const creneauxFiltres = listeCreneaux.filter(creneau => {
+            
             return creneau.jour === args.jour && (
-                args.heure.split(':') >= creneau.heureDebut.split(':')[0] && args.heure.split(':') < creneau.heureFin.split(':')[0]
+                args.heure.split(':') >= creneau.heureDebut.split(':') && args.heure.split(':') < creneau.heureFin.split(':')
             );
         });
 
