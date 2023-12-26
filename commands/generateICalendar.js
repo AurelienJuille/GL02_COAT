@@ -52,11 +52,38 @@ cli
             return [jourMapping[jour]];
         }
 
+        function adjustStartDate(d, jour) {
+            date = new Date(d);
+            switch (jour) {
+              case "L":
+                date.setDate(date.getDate() + (1 + 7 - date.getDay()) % 7);
+                break;
+              case "MA":
+                date.setDate(date.getDate() + (2 + 7 - date.getDay()) % 7);
+                break;
+              case "ME":
+                date.setDate(date.getDate() + (3 + 7 - date.getDay()) % 7);
+                break;
+              case "J":
+                date.setDate(date.getDate() + (4 + 7 - date.getDay()) % 7);
+                break;
+              case "V":
+                date.setDate(date.getDate() + (5 + 7 - date.getDay()) % 7);
+                break;
+              case "S":
+                date.setDate(date.getDate() + (6 + 7 - date.getDay()) % 7);
+                break;
+            }
+            return(`${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`);
+        }
+
         // Crée un événement pour chaque occurrence du cours entre les dates de début et de fin
         selectedCourses.forEach(course => {
+            //
+
             // Formate la date de début et de fin
-            let startDate = formatISODate(args.dateDebut, course.heureDebut);
-            let endDate = formatISODate(args.dateDebut, course.heureFin);
+            let startDate = formatISODate(adjustStartDate(args.dateDebut, course.jour), course.heureDebut);
+            let endDate = formatISODate(adjustStartDate(args.dateDebut, course.jour), course.heureFin);
             //startDate = adjustStartDate(startDate, course.jour);
 
 
