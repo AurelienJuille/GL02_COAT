@@ -1,9 +1,11 @@
 # GL02_COAT
-SRU
+Le présent programme est à destination du service informatique et logistique, des étudiants ainsi du corps enseignant de l'Université centrale de la république de Sealand. Il a été commandé par le groupe *La Mélodie du Code* au groupe *COAT*.
+
+## Licence
+Le programme est sous licence MIT, il peut donc être récupéré et réutilisé par tout tiers. Les auteurs du programme ne peuvent cependant pas être tenus responsables de tout problème causé par celui-ci.
 
 ## Installation
-
-[npm](https://www.npmjs.com/)
+Pour installer le programme, vérifier que vous avez bien [Node.js®](https://nodejs.org/en) installé dans votre système.
 
 ```bash
 npm install
